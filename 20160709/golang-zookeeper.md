@@ -234,4 +234,9 @@ func getServerHost() (host string, err error) {
 	return
 }
 ```
-我们先启动server，可以看到
+我们先启动server，可以看到有三个节点注册到zk：    
+![](https://raw.githubusercontent.com/NotBadPad/blog/master/pic/20160709-1.png)    
+再启动client，可以看到每次client都会随机连接到一个节点进行通信：    
+![](https://raw.githubusercontent.com/NotBadPad/blog/master/pic/20160709-2.png)    
+至此，我们的分布式server就实现了，够简单吧。当然，实际项目中这样的实现是远远不够的，有兴趣的可以研究下一些开源的框架。    
+相关代码：[github](https://github.com/NotBadPad/go-learn/tree/master/zk) 
